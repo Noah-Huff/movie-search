@@ -1,0 +1,73 @@
+:root {
+  --primary-text: #f5f7dc;
+  --search-expand-speed: 0.4s;
+
+  --search-button-background: #29282a;
+  --primary-background: #29282a;
+  --primary-box-shadow: #141314;
+  --secondary-box-shadow: #3e3d40;
+
+  --button-background: #474649;
+  --button-chevron: #232224;
+  --button-chevron-height: 275px;
+  --button-chevron-width: 25px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+
+
+  background: var(--primary-background);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#test-btn {
+  padding: 10px;
+  margin: 50px;
+}
+
+.poster-title {
+  color: var(--primary-text);
+}
+.poster-div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.results-div {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.movie-poster {
+  display: flex;
+  overflow: scroll;
+}
+.label-text {
+  color: var(--primary-text);
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.options-container {
+  display: flex;
+  /* flex-direction: column; */
+  /* border: 1px solid white; */
+  padding-bottom: 20px;
+  margin-top: 15px;  
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+

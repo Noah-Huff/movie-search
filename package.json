@@ -1,0 +1,30 @@
+{
+  "name": "movie-search",
+  "version": "1.0.0",
+  "description": "Search for movies based on the services you want to use.",
+  "main": "server.js",
+  "scripts": {
+    "back": "nodemon backend/server.js",
+    "front": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run back\" \"npm run front\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noah-Huff/movie-search.git"
+  },
+  "author": "Noah Huff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Noah-Huff/movie-search/issues"
+  },
+  "homepage": "https://github.com/Noah-Huff/movie-search#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "colors": "^1.4.0",
+    "concurrently": "^6.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "query-string": "^7.0.0"
+  }
+}

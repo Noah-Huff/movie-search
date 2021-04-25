@@ -1,0 +1,88 @@
+
+
+#user-text {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-text);
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+}
+
+input:focus {
+  outline: none;
+}
+#user-text:focus + #circle {
+  pointer-events: none;
+  border: 3px solid var(--primary-text);
+  animation-name: expand-search;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-duration: var(--search-expand-speed);
+  animation-direction: linear;
+  animation-fill-mode: forwards;
+  border-radius: 48px;
+  transform: translateX(-42%);
+}
+#user-text:focus {
+  transform: translateX(-42%);
+  width: 330px;
+  padding-left: 70px;
+}
+
+
+@keyframes expand-search {
+  75% {
+    width: 425px;
+  }
+  100% {
+    width: 400px;
+  }
+}
+
+.glass {
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-text);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 3px;
+  pointer-events: none;
+}
+.glass::before {
+  content: "";
+  right: -13px;
+  bottom: -3px;
+  height: 3px;
+  width: 15px;
+  position: absolute;
+  background: var(--primary-text);
+  -webkit-transform: rotate(33deg);
+  -moz-transform: rotate(33deg);
+  -ms-transform: rotate(33deg);
+  -o-transform: rotate(33deg);
+}
+
+#circle {
+  display: relative;
+  border: 3px solid var(--primary-text);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  box-shadow: 7px 7px 14px #141314, -7px -7px 14px #3e3d40;
+}
