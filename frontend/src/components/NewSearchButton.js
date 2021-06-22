@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
-import MagnifyingGlassSVG from './MagnifyingGlassSVG';
+import React, { useEffect, useState } from 'react'
+import MagGlass2 from './MagGlass2'
+import MagnifyingGlassSVG from './MagnifyingGlassSVG'
+import pathLink from '../css/pathLink';
 
-const Searchbutton = ({ parentSearch }) => {
+const NewSearchButton = ({ parentSearch }) => {
+    useEffect(() => pathLink(), []);
     let [term, setTerm] = useState('');
 
     const handleChange = (event) => {
@@ -22,19 +25,21 @@ const Searchbutton = ({ parentSearch }) => {
         console.log("clearText called");
         console.log("clearText term ", term);
     }
-
     return (
         <>
+
+
             <div className="search-form" >
                 <div id="search">
-                    <input type="text" id="user-text" onBlur={clearText} autoComplete={"off"} onKeyUp={handleChange}/>
-                    <div id="circle">
-                        <div className="glass"></div>
+                    <input type="text" id="user-text" onBlur={clearText} autoComplete={"off"} onKeyUp={handleChange} />
+                    <div id="circle-2">
+                        <MagGlass2 />
                     </div>
                 </div>
             </div>
+
         </>
     )
 }
 
-export default Searchbutton
+export default NewSearchButton

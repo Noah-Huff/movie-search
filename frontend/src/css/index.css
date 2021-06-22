@@ -53,12 +53,17 @@ code {
 .movie-poster {
   display: flex;
   overflow: scroll;
+  scroll-snap-type: x mandatory;
+  /* scroll-padding-right: 1500px; */
+}
+.mp-section {
+  scroll-snap-align: start;
 }
 .label-text {
   color: var(--primary-text);
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 15px;
-  margin-left: 10px;
+  margin-left: 7px;
 }
 .options-container {
   display: flex;
@@ -70,4 +75,9 @@ code {
   justify-content: center;
   position: relative;
 }
+
+.link-no-underline {
+  text-decoration: none;
+}
+
 

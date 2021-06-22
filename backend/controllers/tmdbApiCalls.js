@@ -8,26 +8,38 @@ const getSearchQuery = (destructure) => {
 }
 
 const getTmdbArray = (url, userSearch) => {
+    let data = qs.stringify();
+    const searchOptions = {
+        method: 'GET',
+        url: `${url}${userSearch}`,
+        headers: { },
+        data: data
+    }
+    return axios(searchOptions);
 }
 
 
 const searchMovies = async (req, res) => {
-    let data = qs.stringify();
     let userQueryString = getSearchQuery(req.url);
-    console.log("User Q String", userQueryString);
     let searchTerm = userQueryString.query.query;
-    const movieOptions = {
-        method: 'GET',
-        url: `${tmdbUrl.movieSearch}${searchTerm}`,
-        headers: { },
-        data: data
-    }
-    let sendBack = "TESTING, TESTING, TESTING";
-    sendBack = await axios(movieOptions);
-    console.log("Send Back ", sendBack.data);
+    let sendBack = await getTmdbArray(tmdbUrl.movieSearch, searchTerm);
+    res.json(sendBack.data);
+}
+const searchTV = async (req, res) => {
+    let userQueryString = getSearchQuery(req.url);
+    let searchTerm = userQueryString.query.query;
+    let sendBack = await getTmdbArray(tmdbUrl.tvSearch, searchTerm);
+    res.json(sendBack.data);
+}
+const searchPeople = async (req, res) => {
+    let userQueryString = getSearchQuery(req.url);
+    let searchTerm = userQueryString.query.query;
+    let sendBack = await getTmdbArray(tmdbUrl.peopleSearch, searchTerm);
     res.json(sendBack.data);
 }
 
 module.exports = {
-    searchMovies
+    searchMovies,
+    searchTV,
+    searchPeople
 }

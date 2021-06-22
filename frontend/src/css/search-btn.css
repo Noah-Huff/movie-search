@@ -24,7 +24,8 @@
 input:focus {
   outline: none;
 }
-#user-text:focus + #circle {
+#user-text:focus + #circle,
+#user-text:focus + #circle-2 {
   pointer-events: none;
   border: 3px solid var(--primary-text);
   animation-name: expand-search;
@@ -78,6 +79,15 @@ input:focus {
   -o-transform: rotate(33deg);
 }
 
+
+#circle-2 {
+  display: relative;
+  border: 3px solid var(--primary-text);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  box-shadow: 7px 7px 14px #141314, -7px -7px 14px #3e3d40;
+}
 #circle {
   display: relative;
   border: 3px solid var(--primary-text);
@@ -85,4 +95,44 @@ input:focus {
   height: 65px;
   border-radius: 50%;
   box-shadow: 7px 7px 14px #141314, -7px -7px 14px #3e3d40;
+}
+
+
+
+
+/* animate the magnifying class svg */
+#magnifying-glass {
+  position: absolute;
+  width: 55px;
+  top: 2px;
+  left: 7px;
+  pointer-events: none;
+  transform: rotate(-12deg);
+}
+
+#magnifying-glass path:nth-child(1) {
+  stroke-dasharray: 1077.56px;
+  stroke-dashoffset: 1077.56px;
+  animation: anim-glass 0.5s forwards ease-in-out;
+  stroke: var(--primary-text);
+}
+#magnifying-glass path:nth-child(2) {
+  stroke-dasharray: 604.86px;
+  stroke-dashoffset: 604.86px;
+  animation: anim-glass 1s forwards ease-in-out 0.5s;
+  stroke: var(--primary-text);
+}
+#magnifying-glass path:nth-child(3) {
+  stroke-dasharray: 2880.31px;
+  stroke-dashoffset: 2880.31px;
+  animation: anim-glass 1.5s forwards ease-in-out 1s;
+  /* stroke: var(--primary-text); */
+  stroke: transparent;
+  opacity: .6;
+}
+
+@keyframes anim-glass {
+  to {
+      stroke-dashoffset: 0;
+  }
 }

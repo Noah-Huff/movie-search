@@ -50,7 +50,7 @@
 .slider-span {
   box-sizing: border-box;
   background: var(--primary-text);
-  opacity: .5;
+  opacity: .3;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -61,8 +61,8 @@
   bottom: 0;
 }
 .slider-label {
-  margin: 5px;
-  width: 60px;
+  margin: 8px;
+  width: 50px;
   height: 30px;
   border-radius: 20px;
   position: relative;
@@ -70,9 +70,9 @@
   box-shadow: 2px 2px 4px var(--primary-box-shadow), -2px -2px 4px var(--secondary-box-shadow);
 }
 .slider + .slider-span {
-  transition: transform .5s ease-in-out;
+  transition: transform .3s ease-in-out;
 }
 .slider:checked + .slider-span {
-  transform: translateX(30px);
+  transform: translateX(20px);
   opacity: 1;
 }

@@ -2,25 +2,26 @@ import React from 'react'
 import Details from '../screens/Details';
 import { Link } from 'react-router-dom';
 
-const MoviePoster = ({ movie, gatherDetails }) => {
+const MoviePoster = ({ movie }) => {
 
     let imageBaseURL = 'https://image.tmdb.org/t/p/w154';
-    const goGetDetails = () => {
-        console.log("GO Get Details", movie);
-        gatherDetails(movie);
-    }
+    let poster = undefined;
+    if (movie.poster_path != undefined)
+        poster = `${imageBaseURL}/${movie.poster_path}`;
+    else if (movie.profile_path != undefined)
+        poster = `${imageBaseURL}${movie.profile_path}`;
     return (
-        <>
+        <section className="mp-section">
             {
-                movie.poster_path !== null &&
+                poster !== undefined &&
                 <div className="poster-div">
-                    <Link to={`/details/${movie.id}`}><p className="poster-title">{movie.title}</p></Link>
-                    <img src={`${imageBaseURL}/${movie.poster_path}`} className="poster-img"></img>
+                    <Link className="link-no-underline" to={`/details/${movie.id}`}><p className="poster-title">{movie.title ? movie.title : movie.name}</p></Link>
+                    <img src={poster} className="poster-img"></img>
 
                 </div>
             }
 
-        </>
+        </section>
     )
 }
 
