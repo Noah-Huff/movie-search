@@ -37,6 +37,17 @@ code {
   margin: 50px;
 }
 
+.poster-section-label {
+  color: var(--primary-text);
+  transform: rotate(-90deg);
+  padding: 20px 20px;
+}
+
+.no-search-results {
+  color: var(--primary-text);
+  padding: 25px 0;
+}
+
 .poster-title {
   color: var(--primary-text);
 }

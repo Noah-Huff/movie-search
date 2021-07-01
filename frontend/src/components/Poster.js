@@ -2,7 +2,7 @@ import React from 'react'
 import Details from '../screens/Details';
 import { Link } from 'react-router-dom';
 
-const MoviePoster = ({ movie }) => {
+const Poster = ({ movie }) => {
 
     let imageBaseURL = 'https://image.tmdb.org/t/p/w154';
     let poster = undefined;
@@ -25,4 +25,4 @@ const MoviePoster = ({ movie }) => {
     )
 }
 
-export default MoviePoster
+export default Poster

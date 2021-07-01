@@ -27,7 +27,8 @@ const Searchbutton = ({ parentSearch }) => {
         <>
             <div className="search-form" >
                 <div id="search">
-                    <input type="text" id="user-text" onBlur={clearText} autoComplete={"off"} onKeyUp={handleChange}/>
+                    <input type="text" id="user-text" autoComplete={"off"} onKeyUp={handleChange}/>
+                    {/* <input type="text" id="user-text" onBlur={clearText} autoComplete={"off"} onKeyUp={handleChange}/> */}
                     <div id="circle">
                         <div className="glass"></div>
                     </div>

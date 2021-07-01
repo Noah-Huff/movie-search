@@ -23,18 +23,21 @@ const searchMovies = async (req, res) => {
     let userQueryString = getSearchQuery(req.url);
     let searchTerm = userQueryString.query.query;
     let sendBack = await getTmdbArray(tmdbUrl.movieSearch, searchTerm);
+    console.log(sendBack.data);
     res.json(sendBack.data);
 }
 const searchTV = async (req, res) => {
     let userQueryString = getSearchQuery(req.url);
     let searchTerm = userQueryString.query.query;
     let sendBack = await getTmdbArray(tmdbUrl.tvSearch, searchTerm);
+    //console.log(sendBack.data);
     res.json(sendBack.data);
 }
 const searchPeople = async (req, res) => {
     let userQueryString = getSearchQuery(req.url);
     let searchTerm = userQueryString.query.query;
     let sendBack = await getTmdbArray(tmdbUrl.peopleSearch, searchTerm);
+    //console.log(sendBack.data);
     res.json(sendBack.data);
 }
 
