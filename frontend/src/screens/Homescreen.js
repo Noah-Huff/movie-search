@@ -22,7 +22,6 @@ const Homescreen = () => {
             console.log("Search Movie");
             let movieSearch = await axios.get(`/api/search/movies?query=${searchButtonValue}&adult=false`);
             setMovie(movieSearch.data.results);
-            setTimeout(() => console.log("Timeout"), 4000, []);
         }
         if (searchTV) {
             console.log("Search TV");
@@ -59,9 +58,9 @@ const Homescreen = () => {
                 {/* <MagnifyingGlassSVG/> */}
                 <NewSearchButton parentSearch={handleSearch} />
                 <div className="options-container">
-                    <label className="label-text">Movies<Slider value={searchMovie} switchSlider={movieToggle} /></label>
-                    <label className="label-text">TV Shows<Slider value={searchTV} switchSlider={tvToggle} /></label>
-                    <label className="label-text">People<Slider value={searchPeople} switchSlider={peopleToggle} /></label>
+                    <label className="label-text">movies<Slider value={searchMovie} switchSlider={movieToggle} /></label>
+                    <label className="label-text">tv shows<Slider value={searchTV} switchSlider={tvToggle} /></label>
+                    <label className="label-text">people<Slider value={searchPeople} switchSlider={peopleToggle} /></label>
                 </div>
             </div>
 

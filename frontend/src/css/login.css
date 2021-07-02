@@ -1,0 +1,60 @@
+
+
+.login-text {
+    max-width: 225px;
+    border: none;
+    padding: 7px;
+    color: var(--primary-text);
+    background: var(--primary-background);
+    box-shadow: inset 3px 3px 7px var(--primary-box-shadow),
+            inset -3px -3px 7px var(--secondary-box-shadow);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.login-text:focus {
+    outline: none;
+    border: none;
+}
+.input-label {
+    color: var(--primary-text);
+}
+.login-div {
+    width: 300px;
+    border: 3px solid var(--primary-text);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 50% 30%;
+    border-bottom-right-radius: 50% 30%; 
+
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.login-form {
+    display: grid;
+}
+.login-title {
+    color: var(--primary-text);
+}
+.primary-btn {
+    background: var(--primary-background);
+    padding: 10px;
+    width: 50px;
+    margin: 20px 0;
+    border: 3px solid var(--primary-text);
+    box-shadow: 7px 7px 14px var(--primary-box-shadow), -7px -7px 14px var(--secondary-box-shadow);
+}
+.primary-btn:hover {
+    box-shadow: 11px 11px 18px var(--primary-box-shadow), -11px -11px 18px var(--secondary-box-shadow);
+}
+.primary-btn:active {
+    box-shadow: 3px 3px 10px var(--primary-box-shadow), -3px -3px 10px var(--secondary-box-shadow);
+}
+.btn-link-text {
+    color: var(--primary-text);
+    text-align: center;
+    font-size: 18px;
+}
